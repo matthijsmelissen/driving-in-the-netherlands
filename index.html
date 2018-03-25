@@ -13,55 +13,86 @@
     </style>
   </head>
   <body>
-    <h2>Driving in the Netherlands</h2>
+    <h1>Driving in the Netherlands</h1>
 
-    <div id="priority" class="street-view"></div>
-    Traffic on the main road has a sign .
+    <h2>Right of way</h2>
+
+    <p>There are two types of intersections in the Netherlands: signed and unsigned intersections.</p>
+
+    <p>Signed intersections are intersections between a main road and a side road of lesser importance. Vehicles coming from the side road have to give way to vehicles on the main road.</p>
+
+
+
+
     <div id="give-way" class="street-view"></div>
-    The other direction has 'shark teeth' and a sign \/.
+    <p>Traffic that needs to give way has 'shark teeth' and a sign <img src="B6.svg" style="height: 1em">.</p>
+
     <div id="x" class="street-view"></div>
 
     <div id="traffic_lights" class="street-view"></div>
-    Traffic (blinking orange light)
+    <p>Traffic signs on crossings with traffic lights can be ignored if the traffic lights are working: these signs only apply when the lights are out of order.</p>
+
+    <p>Traffic that has the right of way either has a sign <img src="B1.svg" style="height: 1em">, or <img src="B3.svg" style="height: 1em">.</p>
+
+    <div id="equal-crossing" class="street-view"></div>
+    On unsigned intersections, you need to give way to all vehicles (including bicycles) coming from the right. These intersections are always smaller roads, such as residential districts.
+
+    <div id="priority" class="street-view"></div>
+    Vehicles on the main road has a sign .
+
+    Note that for the purpose of all preceding rules (priority to the right, signed priority crossings), cyclists are trated the same as cars.
+
+    <div id="uitritconstructie" class="street-view"></div>
+    When turning into some streets, the pavement is raised. In this case, traffic crossing the pavement needs to give way to all traffic on the main road (including pedestrians).
 
 
-    Roundabouts
+    <h2>Roundabouts</h2>
 
 
     <div id="turbo-roundabout" class="street-view"></div>
     On multilane roundabouts (turbo-roundabouts), it is important to choose the correct lane. After that, just keep following your lane and you will end up at the correct place.
 
     <div id="roundabout-entering" class="street-view"></div>
-    With roundabouts, you need to give way at tw
+    <p>With roundabouts, you need to give way at two places. First, when approaching the roundabout, look left to give way to any traffic already on the roundabout. The bicycle paths might or might not be included (pay attention to the shark teeth).</p>
 
     <div id="roundabout-leaving" class="street-view"></div>
-    When leaving the roundabout, you often (but not always) need to give way to bicyclists and pedestrians. Pay attention to the shark teeth and zebra crossing.
+    <p>When leaving the roundabout, you often (but not always) need to give way to bicyclists and pedestrians. Pay attention to the shark teeth and zebra crossing.</p>
 
 
-    Speed limits
+    <h2>Speed limits</h2>
+    <div id="speed-limit" class="street-view"></div>
+
     Speed limits announced by such signs are valid until the next intersection.
 
 
     <div id="inside-built-up-area" class="street-view"></div>
-    Within towns, the speed limit is 50km/h.
+    <p>Within built-up area, the speed limit is 50km/h. The beginning of built-up area is indicated with a sign showing the name of the town: <img src="H1.svg" style="height: 1em">.</p>
 
     <div id="outside-built-up-area" class="street-view"></div>
-    Outside of towns, the speed limit is 80km/h.
+    <p>Outside of built-up area, the speed limit is 80km/h. The end of town is indicated with a sign <img src="H2.svg" style="height: 1em">.</p>
 
     <div id="autoweg" class="street-view"></div>
-    On autowegen, the speed limit is 130km/h.
+    <p>On roads signed with <img src="G1.svg" style="height: 1em">, the speed limit is 130km/h.</p>
 
     <div id="autosnelweg" class="street-view"></div>
-    On autosnelwegen, the speed is 130km/h.
+    <p>On highways (signed with <img src="G3.svg" style="height: 1em">), the speed limit is 130km/h.</p>
 
     <script>
       var panorama;
       function initialize() {
         panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('equal-crossing'),
+            {
+              position: {lat: 51.5147937, lng: 5.3980643},
+              pov: {heading: 240, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
             document.getElementById('priority'),
             {
               position: {lat: 52.0376052, lng: 4.4873439},
-              pov: {heading: 314, pitch: 0},
+              pov: {heading: 320, pitch: 0},
               zoom: 1
             });
 
@@ -82,9 +113,25 @@
             });
 
         panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('uitritconstructie'),
+            {
+              position: {lat: 52.0578124, lng: 4.3194953},
+              pov: {heading: 265, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
             document.getElementById('autoweg'),
             {
               position: {lat: 52.224643, lng: 4.9879607},
+              pov: {heading: 349, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('autosnelweg'),
+            {
+              position: {lat: 52.1208282, lng: 4.5852962},
               pov: {heading: 349, pitch: 0},
               zoom: 1
             });
