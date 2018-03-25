@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Street View</title>
+    <style>
+      html, body {
+      }
+      .street-view {
+        height: 300px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Driving in the Netherlands</h2>
+
+    <div id="priority" class="street-view"></div>
+    Traffic on the main road has a sign .
+    <div id="give-way" class="street-view"></div>
+    The other direction has 'shark teeth' and a sign \/.
+    <div id="x" class="street-view"></div>
+
+    <div id="traffic_lights" class="street-view"></div>
+    Traffic (blinking orange light)
+
+
+    Roundabouts
+
+
+    <div id="turbo-roundabout" class="street-view"></div>
+    On multilane roundabouts (turbo-roundabouts), it is important to choose the correct lane. After that, just keep following your lane and you will end up at the correct place.
+
+    <div id="roundabout-entering" class="street-view"></div>
+    With roundabouts, you need to give way at tw
+
+    <div id="roundabout-leaving" class="street-view"></div>
+    When leaving the roundabout, you often (but not always) need to give way to bicyclists and pedestrians. Pay attention to the shark teeth and zebra crossing.
+
+
+    Speed limits
+    Speed limits announced by such signs are valid until the next intersection.
+
+
+    <div id="inside-built-up-area" class="street-view"></div>
+    Within towns, the speed limit is 50km/h.
+
+    <div id="outside-built-up-area" class="street-view"></div>
+    Outside of towns, the speed limit is 80km/h.
+
+    <div id="autoweg" class="street-view"></div>
+    On autowegen, the speed limit is 130km/h.
+
+    <div id="autosnelweg" class="street-view"></div>
+    On autosnelwegen, the speed is 130km/h.
+
+    <script>
+      var panorama;
+      function initialize() {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('priority'),
+            {
+              position: {lat: 52.0376052, lng: 4.4873439},
+              pov: {heading: 314, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('give-way'),
+            {
+              position: {lat: 52.0376052, lng: 4.4873439},
+              pov: {heading: 314, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('x'),
+            {
+              position: {lat: 52.0468315, lng: 4.4784949},
+              pov: {heading: 22, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('autoweg'),
+            {
+              position: {lat: 52.224643, lng: 4.9879607},
+              pov: {heading: 349, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('inside-built-up-area'),
+            {
+              position: {lat: 52.0631172, lng: 4.4517234},
+              pov: {heading: 53, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('outside-built-up-area'),
+            {
+              position: {lat: 52.0632618, lng: 4.4517963},
+              pov: {heading: 232, pitch: 0},
+              zoom: 1
+            });
+
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('turbo-roundabout'),
+            {
+              position: {lat: 52.0632618, lng: 4.4517963},
+              pov: {heading: 232, pitch: 0},
+              zoom: 1
+            });
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('roundabout-entering'),
+            {
+              position: {lat: 51.9896968, lng: 4.4786387},
+              pov: {heading: 123, pitch: 0},
+              zoom: 1
+            });
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('roundabout-leaving'),
+            {
+              position: {lat: 51.9894848, lng: 4.4789561},
+              pov: {heading: 169, pitch: 0},
+              zoom: 1
+            });
+      }
+    </script>
+
+
+    <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCROqdiO8nVlly2eNebPsoML2OMmxaa8gc&callback=initialize">
+    </script>
+
+    Additions/corrections: mail me at <a href="mailto:info@matthijsmelissen.nl">info@matthijsmelissen.nl</a> or create a pull request on Github.
+  </body>
+</html>
