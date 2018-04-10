@@ -34,6 +34,8 @@
 
     <h2>Right of way</h2>
 
+    <p>When driving in the Netherlands, you will notice the large amoung of cyclists. It is important to remember that for the purpose of right of way, cyclists are treated exactly the same as cars.
+
     <p>There are two types of intersections in the Netherlands: unequal and equal intersections.</p>
 
     <div id="give-way" class="street-view"></div>
@@ -49,7 +51,7 @@
     <p>One thing to notice is that traffic signs and shark teeth on crossings with traffic lights can be ignored if the traffic lights are working: these signs only apply when the lights are out of order. In the picture, the traffic lights are working, so the sign <img src="B6.svg"> and the shark teeth does not apply, and we don't need to give way.</p>
 
     <div id="equal-intersection" class="street-view"></div>
-    <p>So far we only discussed unequal intersections. Equal intersections can be recognized by the fact that they have no signs or shark teeth. On equal intersections, you need to give way to all vehicles (including bicycles) coming from the right. In the illustration, there are no priority signs, so we need to give way to cars and bicycles coming from the right. Unequal intersections are normally only found on smaller roads, such as within residential districts. </p>
+    <p>So far we only discussed unequal intersections. Equal intersections can be recognized by the fact that they have no signs or shark teeth. On equal intersections, you need to give way to all vehicles (including bicycles) coming from the right. Note that this means you may need to give way to traffic coming from minor side streets, even if you are on a main road. Fortunately, unequal intersections are normally only found on smaller roads, such as within residential districts. In the illustration, there are no priority signs, so we need to give way to cars and bicycles coming from the right.</p>
 
     <div id="uitritconstructie" class="street-view"></div>
     <p>Sometimes side streets enter the main road across a raised pavement, a so called <em>uitritconstructie</em>. If you have to cross the raised pavement, you need to give way to all traffic on the main road (including pedestrians that walk across the pavement).</p>
@@ -73,19 +75,19 @@
 
     <h2>Speed limits</h2>
     <div id="speed-limit" class="street-view"></div>
-    <p>This sign indicates a 70km/h speed limit. With exception of shields containing the word 'ZONE', speed limits are valid until the next intersection.</p>
+    <p>This sign indicates a 70km/h speed limit. With exception of shields containing the word 'ZONE', speed limits are valid until the next intersection. Speed limits are enforced strictly, both within towns and on motoreays: there are many speed cameras across the country, and fines are sent for violations of as little as 3 km/h over the limit.</p>
 
     <div id="inside-built-up-area" class="street-view"></div>
-    <p>Within built-up areas, the speed limit is 50km/h. The beginning of built-up area is indicated with a sign showing the name of the town: <img src="H1.svg">. Note that in this case, there is an explicit 50km/h sign, but the speed limit of 50km/h even holds with only the town name shield.</p>
+    <p>Within built-up areas, the speed limit is 50km/h (unless indicated otherwise). The beginning of built-up area is indicated with a sign showing the name of the town: <img src="H1.svg">. It is important to note that the speed limit of 50km/h even holds if there is only a town name shield, and no explicit 50km/h sign.</p>
 
     <div id="outside-built-up-area" class="street-view"></div>
-    <p>Outside of built-up area, the speed limit is 80km/h. The end of town is indicated with a sign <img src="H2.svg">.</p>
+    <p>Outside of built-up area, the speed limit is 80km/h (unless indicated otherwise). The end of town is indicated with a sign <img src="H2.svg">.</p>
 
     <div id="autoweg" class="street-view"></div>
-    <p>On motorways signed with <img src="G3.svg">, the speed limit is 100km/h.</p>
+    <p>On 'autowegen' signed with <img src="G3.svg">, the speed limit is 100km/h (unless indicated otherwise).</p>
 
     <div id="autosnelweg" class="street-view"></div>
-    <p>Finally, on motorways signed with <img src="G1.svg">, the speed limit is 130km/h.</p>
+    <p>Finally, on 'autosnelwegen' (motorways) signed with <img src="G1.svg">, the speed limit is 130km/h, unless indicated otherwise. Especially around the big cities, signs often limit the speed limit to 80, 100 or 120 km/h.</p>
     </div>
 
     <script>
@@ -181,15 +183,15 @@
         new google.maps.StreetViewPanorama(
             document.getElementById('inside-built-up-area'),
             {
-              position: {lat: 52.0631172, lng: 4.4517234},
-              pov: {heading: 65, pitch: 0},
+              position: {lat: 52.0966943, lng: 4.4761839},
+              pov: {heading: 290, pitch: 0},
               zoom: 1
             });
         new google.maps.StreetViewPanorama(
             document.getElementById('outside-built-up-area'),
             {
-              position: {lat: 52.0632618, lng: 4.4517963},
-              pov: {heading: 232, pitch: 0},
+              position: {lat: 52.0967703, lng: 4.4758265},
+              pov: {heading: 130, pitch: 0},
               zoom: 1
             });
         new google.maps.StreetViewPanorama(
